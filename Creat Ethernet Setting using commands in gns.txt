@@ -1,0 +1,26 @@
+make secend Ethernet setting which we use in gns3
+1. First go to device manager and click the Network adapters and go to Action option
+2. Click add lagacy hardware
+3. click next and then click install the hardware manually
+4. Choose network adapter and click next
+5. choose microsoft and then choose Microsoft KM-TEST Loopback Adapter
+6. Install Now
+
+
+Configure using gns3:
+1.First, you can run command prompt with Administrator mode
+2.Then, Switch your directory to GNS# directory [my installation directory is "C:\Program Files\GNS3"], So i use cd command. [ cd "C:\Program Files\GNS3"]
+3.Run this command-------loopback-manager.cmd
+4.Choose option 4 for remove all loopback interfaces if installed
+5. Choose option 2 for install a new loopback interface
+6. Choose option 6 for quit
+7. Reboot your Computer and use the newly installed loopback
+8. After that run GNS3 and configure Cloud
+
+run this command in cmd to running the cloud automatically
+	sc config npf start = auto
+
+assign the ip address, subnet mask, add default gateway, add DNS address
+1. Go to Network adapters
+2. Go to properties
+3. Choose Ip4v and Assign manual ip adress and other things

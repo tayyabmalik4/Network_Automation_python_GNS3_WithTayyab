@@ -1,0 +1,6 @@
+ip name-server 8.8.8.8 :
+	this command is use to assign the name of the server
+ip domain ?   :
+	this command is use to check the domain commands
+ip domain lookup   :
+	this command is use to Enable IP Domain Name System hostname translation
