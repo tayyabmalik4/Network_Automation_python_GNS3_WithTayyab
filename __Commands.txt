@@ -4,3 +4,15 @@ ip domain ?   :
 	this command is use to check the domain commands
 ip domain lookup   :
 	this command is use to Enable IP Domain Name System hostname translation
+ip route 0.0.0.0 0.0.0.0 gatewayip
+	when we assign the route ip first we take ip address then subnet mask then gateway ip
+username tayyab password cisco
+	we assign username and password to the router
+enable password cisco
+	we enabled the password of the router
+line vty 0 4
+	go to line
+login local
+	we assign that the login is lacally
+transport input telnet
+	we assign that the input of the transportation is telnet
