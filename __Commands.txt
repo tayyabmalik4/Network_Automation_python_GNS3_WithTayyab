@@ -16,3 +16,7 @@ login local
 	we assign that the login is lacally
 transport input telnet
 	we assign that the input of the transportation is telnet
+sh run | sec router
+	this command is use to check the router configuration
+username tayyab privilege 15
+	if we want to not check the enable password then we use this command

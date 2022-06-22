@@ -1,35 +1,39 @@
 import getpass
 import sys
 import telnetlib
-from this import s
 
 
-def raw_input(param):
-    pass
-
-
+# taking ip address of the router
 HOST = input("Enter Device IP: \n")
+# taking username of the router
 username = input("Enter Your username of the Router: \n")
-
+# taking input of the router
 password = getpass.getpass()
 
+# creating the variable of the telnet
 tn = telnetlib.Telnet(HOST)
 
+# check and write the username
 tn.read_until(b"Username: ")
 tn.write(username.encode('ascii')+b"\n")
 
-
+# Check and write the password 
 if password:
     tn.read_until(b"Password: ")
     tn.write(password.encode('ascii')+ b"\n")
 
-
+# enable the password
 tn.write(b"enable\n")
 tn.write(b"cisco\n")
+# go to configuration file
 tn.write(b"conf t \n")
-tn.write(b"int fa1/0 \n")
-tn.write(b"ip address 10.10.10.7 255.255.255.0 \n")
+# confiure loopback 1 in the router
+tn.write(b"int loop 1 \n")
+tn.write(b"ip address 1.1.2.7 255.255.255.0 \n")
+# end the confiuration
 tn.write(b"end \n")
+# exit the router configuration
 tn.write(b"exit \n")
 
+# show all the command which we run in the script
 print(tn.read_all().decode('ascii'))
