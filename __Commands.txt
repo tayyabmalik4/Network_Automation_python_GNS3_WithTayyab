@@ -20,3 +20,9 @@ sh run | sec router
 	this command is use to check the router configuration
 username tayyab privilege 15
 	if we want to not check the enable password then we use this command
+sh vlan-switch
+	checking the vlan switch details
+sh users
+	checking all details of the user
+clear line 162
+	clear the line 162 of the switch
